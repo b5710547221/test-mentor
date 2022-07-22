@@ -11,6 +11,7 @@ interface IObj1 {
 
 }
 
+
 const defaultProps:IObj1[] = [];
 
 export const Dashboard: React.FC  = () => {
@@ -41,8 +42,6 @@ export const Dashboard: React.FC  = () => {
                return null;
               })}
        </ul>
-      
-     
      </div>
     )
   }
