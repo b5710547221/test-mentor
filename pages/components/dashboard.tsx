@@ -1,20 +1,19 @@
 import react from 'react'
 import * as React from 'react'
 
-
 interface IObj1 {
-  id: string;
+  id: number;
   name: string;
-  current_price: number;
-  symbol: string;
-  image: string; 
-
 }
 const data = 
-     [ {"id" :"222","name":"Doe","current_price":1,"symbol":"aaa","image":"1111"},
-       {"id" :"333","name":"opi","current_price":2,"symbol":"saa","image":"1114"},];
-
-
+     [ {"id" :1,"name":"Kenny Roger"},
+       {"id" :2,"name":"Wittawas Wi"},
+       {"id" :3,"name":"Oak1"},
+       {"id" :4,"name":"Oak2"},
+       {"id" :5,"name":"Oak3"},
+       {"id" :6,"name":"Oak4"},
+       {"id" :7,"name":"Oak5"}];
+       
 const defaultProps:IObj1[] = data;
 
 export const Dashboard: React.FC  = () => {
@@ -26,12 +25,11 @@ export const Dashboard: React.FC  = () => {
     };
     return (
       <div className="App">
-      
        <ul className="posts">
        <input type="text" value={search} onChange={(e) => setSearch(e.target.value)}></input>
            {obj1.map((obj1) => {
-               if (search == "" || obj1.name.toLowerCase().includes(search.toLowerCase())) {
-                   return (
+               if (search != "" && obj1.name.toLowerCase().includes(search.toLowerCase())) {
+                    return (
                        <option key={obj1.name}>
                            <h3>{obj1.name}</h3>
                        </option>
