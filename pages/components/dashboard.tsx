@@ -27,9 +27,21 @@ export const Dashboard: React.FC  = () => {
       
        <ul className="posts">
        <input type="text" value={search} onChange={(e) => setSearch(e.target.value)}></input>
-          
+           {obj1.map((obj1) => {
+               if (search == "" || obj1.name.toLowerCase().includes(search.toLowerCase())) {
+                   return (
+                       <li key={obj1.id}>
+                           <h3>{obj1.id}</h3>
+                           <p>{obj1.current_price}</p>
+                           <p>{obj1.symbol}</p>
+                           <img src={obj1.image} alt="image" />
+                       </li>
+                   );
+               }
+               return null;
+              })}
        </ul>
-     
+      
      
      </div>
     )
