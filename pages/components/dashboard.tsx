@@ -10,21 +10,20 @@ interface IObj1 {
   image: string; 
 
 }
+const data = 
+     [ {"id" :"222","name":"Doe","current_price":1,"symbol":"aaa","image":"1111"},
+       {"id" :"333","name":"opi","current_price":2,"symbol":"saa","image":"1114"},];
 
 
-const defaultProps:IObj1[] = [];
+const defaultProps:IObj1[] = data;
 
 export const Dashboard: React.FC  = () => {
-    const [obj1, setObj1]: [IObj1[], (posts: IObj1[]) => void] = React.useState(defaultProps);
+    const [obj1, setObj1]  = React.useState(defaultProps);
     const [search, setSearch]: [string, (search: string) => void] = React.useState("");
   
     const handleChange = (e: { target: { value: string; }; }) => {
       setSearch(e.target.value);
     };
-    setObj1(
-       {"id" :"222","name":"Doe","current_price":1,"symbol":"aaa","image":"1111"},
-      )
-  
     return (
       <div className="App">
       

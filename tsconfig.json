@@ -16,7 +16,6 @@
     "module": "esnext",
     "isolatedModules": true,
     "jsx": "preserve",
-  
   },
   "include": [
     "next-env.d.ts",
