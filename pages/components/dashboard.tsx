@@ -21,7 +21,9 @@ export const Dashboard: React.FC  = () => {
     const handleChange = (e: { target: { value: string; }; }) => {
       setSearch(e.target.value);
     };
-   
+    setObj1(
+       {"id" :"222","name":"Doe","current_price":1,"symbol":"aaa","image":"1111"},
+      )
   
     return (
       <div className="App">
